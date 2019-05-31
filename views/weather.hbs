@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{city}}</title>
+</head>
+<body>
+    <h1>Weather for {{ city }}</h1>
+    <hr>
+    <table>
+            <tr>
+                <td> <!-- map --> </td>
+                <td>
+                    {{#each weather}}
+                        <div>
+                            <img src="http://openweathermap.org/img/w/{{this.icon}}.png" alt="">
+                            <b>{{this.main}}</b>
+                            <span>{{ this.description }}</span>
+                        </div>
+                    {{/each}}
+                    <div>
+                        Current: {{ temperature.temp}}C
+                    </div>
+                    <div>
+                        Min: {{ temperature.temp_min}}C
+                    </div>
+                        Max: {{ temperature.temp_max}}C
+                    </div>
+                </td>
+            </tr>
+        </table>
+</body>
+</html>
