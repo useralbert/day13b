@@ -9,7 +9,7 @@ const PORT = parseInt(process.argv[2] || process.env.APP_PORT || 3000);
 //Create an instance of the applicaiton
 const app = express();
 
-
+;
 //Configure handle bars
 app.engine('hbs', hbs({ defaultLayout: 'main.hbs' }));
 app.set('view engine', 'hbs');
